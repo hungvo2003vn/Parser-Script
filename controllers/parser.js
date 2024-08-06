@@ -39,7 +39,7 @@ const parseData = (configData, inputData) => {
 
     const length = lines.length
     const parsedHeader = parseLine(lines[0], configs.headers)
-    const parsedDetail = lines.slice(1, length - 1).map(line => parseLine(line.slice(1, length), configs.details))
+    const parsedDetail = lines.slice(1, length - 1).map(line => parseLine(line, configs.details))
     const parsedFooter = parseLine(lines[length - 1], configs.footers)
 
     return {
